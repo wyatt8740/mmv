@@ -1,0 +1,6 @@
+patches-as-of-mmv-1.01b-15.diff
+man-page-fixes.diff
+format-security.diff
+better-diagnostics-for-directories-584850.diff
+man-page-examples.diff
+man-page-warning-149873.diff

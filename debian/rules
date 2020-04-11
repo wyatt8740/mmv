@@ -1,0 +1,10 @@
+#! /usr/bin/make -f
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build -- LDFLAGS="$(LDFLAGS)" CFLAGS="$(CFLAGS) $(shell getconf LFS_CFLAGS) -DIS_SYSV -DHAS_DIRENT -DHAS_RENAME"
